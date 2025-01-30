@@ -1,0 +1,126 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+a {
+  text-decoration: none;
+  color: #337ab7;
+}
+
+a:hover {
+  color: #23527c;
+}
+
+/* Header Styles */
+
+.head {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.head font {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation Styles */
+
+.navbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #337ab7;
+  border-bottom: 1px solid #337ab7;
+}
+
+.navbar li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px 20px;
+  display: block;
+}
+
+.navbar a:hover {
+  background-color: #23527c;
+}
+
+/* Section Styles */
+
+.section {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #337ab7;
+}
+
+/* List Styles */
+
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li span.strong {
+  font-weight: bold;
+}
+
+/* Project Styles */
+
+.project-description {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Footer Styles */
+
+footer {
+  background-color: #337ab7;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+/* Logo Styles */
+
+.hdrlogo {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.hdrlogo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
