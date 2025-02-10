@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Data & Password Validation</title>
+</head>
+<body>
+    <h2>Validation Form</h2>
+
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="validateCity()">Validate City</button>
+    <p id="cityResult"></p>
+
+    <input type="text" id="tempInput" placeholder="Enter temperature (°C)">
+    <button onclick="validateTemperature()">Validate Temperature</button>
+    <p id="tempResult"></p>
+
+    <input type="text" id="windInput" placeholder="Enter wind speed (km/h)">
+    <button onclick="validateWindSpeed()">Validate Wind Speed</button>
+    <p id="windResult"></p>
+
+    <input type="password" id="passwordInput" placeholder="Enter password">
+    <button onclick="validatePassword()">Validate Password</button>
+    <p id="passwordResult"></p>
+    
+
+    <script>
+        function validateCity() {
+            const city = document.getElementById("cityInput").value.trim();
+            const cityRegex = /^[a-zA-Z\s-]+$/; 
+            
+            if (cityRegex.test(city)) {
+                document.getElementById("cityResult").innerHTML = "✅ Valid city name.";
+            } else {
+                document.getElementById("cityResult").innerHTML = "❌ Invalid city name. Use only letters, spaces, and hyphens.";
+            }
+        }
+        
+      function validateTemperature() {
+            const temp = document.getElementById("tempInput").value.trim();
+            const tempRegex = /^-?\d+(\.\d+)?$/;  
+            
+            if (tempRegex.test(temp)) {
+                document.getElementById("tempResult").innerHTML = "✅ Valid temperature.";
+            } else {
+                document.getElementById("tempResult").innerHTML = "❌ Invalid temperature. Enter a number (e.g., 25, -3, 30.5).";
+            }
+        }
+
+        function validateWindSpeed() {
+            const wind = document.getElementById("windInput").value.trim();
+            const windRegex = /^\d+(\.\d+)?$/; 
+            
+            if (windRegex.test(wind)) {
+                document.getElementById("windResult").innerHTML = "✅ Valid wind speed.";
+            } else {
+                document.getElementById("windResult").innerHTML = "❌ Invalid wind speed. Enter a positive number (e.g., 10, 5.5).";
+            }
+        }
+
+        function validatePassword() {
+            const password = document.getElementById("passwordInput").value.trim();
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            
+            if (passwordRegex.test(password)) {
+                document.getElementById("passwordResult").innerHTML = "✅ Valid password.";
+            } else {
+                document.getElementById("passwordResult").innerHTML = "❌ Invalid password. Must be at least 8 characters long and include an uppercase letter, a lowercase letter, a number, and a special character.";
+            }
+        }
+    </script>
+</body>
+</html>
